@@ -99,7 +99,7 @@
             function Area1() {
                 var e = document.getElementById("ddlViewBy");
                 var value = e.value;
-                var text = e.options[e.selectedIndex].text;               
+                areadistrict = e.options[e.selectedIndex].text;               
                 document.getElementById("engVer").style.display = "none";
                 document.getElementById("chiVer").style.display = "none";
                 document.getElementById("toptitle").innerHTML = "Fitness Walking Tracks";
@@ -159,7 +159,7 @@
                 fetch("mydata.json")
                 .then(response => response.json())
                 .then(data => {
-                        if(data.items[i].District_en == text){
+                        if(data.items[i].District_en == areadistrict){
                             let vTitle_enwithdistrict = data.items[i].Title_en;
                             let vDistrict_enwithdistrict = data.items[i].District_en;
                             let vRoute_enwithdistrict = data.items[i].Route_en;
